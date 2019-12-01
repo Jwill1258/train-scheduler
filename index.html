@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <title>Train Scheduler</title>
+    <!-- reset CSS  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- My CSS Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- meta tags for responsive layout (to different media)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <!-- Moment JS for timing -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Firebase Reference from my firebase project-->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+ 
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-lg-md-12 col-sm-12 col-sm-12">
+                <div class="jumbotron" style="background-image:url('assets/images/backgroundx.jpg')">
+                    <h1>Any Time is Train Time </h1>
+                    <h3>Choo Choo. Chee Chee. </h3>
+                    <h6>( Current time: <span id="currentTime"></span></h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="formDiv">
+                        <div class="card card-default">
+                                <div class="card-heading">
+                                    <h4 class="card-title" style="text-align:left"><img src="assets/images/if_train_173119.png" alt="train">Add Train</h4>
+                                </div>
+                            <div class="card-body" id="addTrain"> 
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label for="trainName">Train Name:</label>
+                                        <input class="form-control" id="trainName" type="text" required placeholder="GotTransit">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="destination">Destination</label>
+                                        <input class="form-control" id="destination" type="text" required placeholder="Montreal">
+                                    </div>
+                                    <div class="form-group">
+                                            <label for="firstTrainTime">First Train Time <br> <span style="font-size:14px">(HH:mm - military time)</span></label>
+                                            <input class="form-control" id="firstTrainTime" type="time" required  placeholder= "4:30 AM">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="frequency">Frequency (min)</label>
+                                        <input class="form-control" id="frequency" type="number" min="1" step='1' required  placeholder="60">
+                                    </div>
+                                    <p id="missingField" class="form-validation"></p>
+                                    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="card card-default">
+                    <div class="card-heading">
+                        <h4> <img src="assets/images/if_time_173116.png" alt="clock"> Current Train Schedule</h4> 
+                    </div>
+                        <div class="card-body">
+                            <table class="table table-hover">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th class="text-center" scope="col"> Train Name </th>
+                                        <th class="text-center" scope="col"> Destination </th>
+                                        <th class="text-center" scope="col"> Frequency (min) </th>
+                                        <th class="text-center" scope="col"> Next Arrival </th>
+                                        <th class="text-center" scope="col"> Minutes Away </th>
+                                        <th class="text-center" scope="col"> Optional (trash) </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="trainSchedule">
+
+                                    <!-- dynamic table content from javascript will be appended here-->
+
+                                </tbody>
+                            </table>
+                        </div>
+                </div> 
+            </div>
+
+
+
+            
+        </div>
+    
+    </div>
+    <script src="assets/javascript/logic.js"></script>
+
+    
+</body>
+
+</html>
