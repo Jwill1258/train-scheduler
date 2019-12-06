@@ -1,6 +1,5 @@
 div.jumbotron{
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/fl-train.png);
-    color: white;
+    background-image:url(../images/Train.jpeg);
 /* opacity:0.9; */
 }
 
@@ -19,7 +18,7 @@ h4{
     color:white;
 }
 .card-heading{
-    background-color:rgb(233, 136, 25);
+    background-color:rgb(205, 63, 181);
     color:black;
 }
 tr th,td{
