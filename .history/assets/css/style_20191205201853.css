@@ -1,6 +1,6 @@
 div.jumbotron{
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/fl-train.png);
-    background-size: cover;
+    background-size: contain;
     color: white;
 /* opacity:0.6; */
 }
