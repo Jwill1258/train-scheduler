@@ -3,10 +3,9 @@
     
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="icon" href="assets/images/favicon.ico">
     <title>Train Scheduler</title>
     <!-- reset CSS  -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/resets.css">
     <!-- My CSS Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- meta tags for responsive layout (to different media)-->
@@ -18,7 +17,7 @@
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- Firebase Reference from my firebase project-->
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
  
 
 </head>
@@ -28,9 +27,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-lg-md-12 col-sm-12 col-sm-12">
-                <div class="jumbotron" style="background-image:url('assets/images/backgroundx.jpg')">
-                    <h1>Any Time is Train Time </h1>
-                    <h3>Choo Choo. Chee Chee. </h3>
+                <div class="jumbotron">
+                    <h1>Sunshine Tracker || The Florida Transit Site</h1>
                     <h6>( Current time: <span id="currentTime"></span></h6>
                 </div>
             </div>
@@ -40,7 +38,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="formDiv">
                         <div class="card card-default">
                                 <div class="card-heading">
-                                    <h4 class="card-title" style="text-align:left"><img src="assets/images/if_train_173119.png" alt="train">Add Train</h4>
+                                    <h4 class="card-title">Add Train</h4>
                                 </div>
                             <div class="card-body" id="addTrain"> 
                                 <form role="form">
@@ -53,8 +51,8 @@
                                         <input class="form-control" id="destination" type="text" required placeholder="Montreal">
                                     </div>
                                     <div class="form-group">
-                                            <label for="firstTrainTime">First Train Time <br> <span style="font-size:14px">(HH:mm - military time)</span></label>
-                                            <input class="form-control" id="firstTrainTime" type="time" required  placeholder= "4:30 AM">
+                                            <label for="firstTrainTime">Train Time <br> <span style="font-size:14px">(HH:mm - military time)</span></label>
+                                            <input class="form-control" id="firstTime" type="time" required  placeholder= "4:30 AM">
                                     </div>
                                     <div class="form-group">
                                         <label for="frequency">Frequency (min)</label>
@@ -69,7 +67,7 @@
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                 <div class="card card-default">
                     <div class="card-heading">
-                        <h4> <img src="assets/images/if_time_173116.png" alt="clock"> Current Train Schedule</h4> 
+                        <h4>Current Train Schedule</h4> 
                     </div>
                         <div class="card-body">
                             <table class="table table-hover">
@@ -99,7 +97,8 @@
         </div>
     
     </div>
-    <script src="assets/javascript/logic.js"></script>
+    
+    <script src="assets/js/logic.js"></script>
 
     
 </body>

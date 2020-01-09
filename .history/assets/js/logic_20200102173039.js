@@ -1,12 +1,12 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyCa_Z7VAuTjtfBPRWwWlbFPz9L7oV3rwx4",
-  authDomain: "train-7df11.firebaseapp.com",
-  databaseURL: "https://train-7df11.firebaseio.com",
-  projectId: "train-7df11",
-  storageBucket: "train-7df11.appspot.com",
-  messagingSenderId: "276358036361",
-  appId: "1:276358036361:web:c0c8f4fb410b08daf83f58"
-};
+    apiKey: "AIzaSyDsDgqKFYbtO3X7tx_KLwfwRs8_5KXtMjo",
+    authDomain: "train-scheduler-d1067.firebaseapp.com",
+    databaseURL: "https://train-scheduler-d1067.firebaseio.com",
+    projectId: "train-scheduler-d1067",
+    storageBucket: "",
+    messagingSenderId: "721832122611",
+    appId: "1:721832122611:web:7060ce535e65bf42"
+  };
   firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
@@ -14,7 +14,7 @@ var firebaseConfig = {
 $("#add-train").on("click", function (event) {
     event.preventDefault();
 
-    //user input info
+    //user input
     var traName = $("#train-name").val().trim();
     var traDes = $("#destination").val().trim();
     var traTime = $("#time").val().trim();

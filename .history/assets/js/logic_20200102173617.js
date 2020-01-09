@@ -1,20 +1,20 @@
+// Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyCa_Z7VAuTjtfBPRWwWlbFPz9L7oV3rwx4",
-  authDomain: "train-7df11.firebaseapp.com",
-  databaseURL: "https://train-7df11.firebaseio.com",
-  projectId: "train-7df11",
-  storageBucket: "train-7df11.appspot.com",
-  messagingSenderId: "276358036361",
-  appId: "1:276358036361:web:c0c8f4fb410b08daf83f58"
+apiKey: "AIzaSyCFnCrE0px7tv5TuKNodRGbvgcFqUhnW0g",
+authDomain: "train-scheduler-3ba68.firebaseapp.com",
+databaseURL: "https://train-scheduler-3ba68.firebaseio.com",
+projectId: "train-scheduler-3ba68",
+storageBucket: "train-scheduler-3ba68.appspot.com",
+messagingSenderId: "69111214744",
+appId: "1:69111214744:web:d1410487c60dd6097396ed"
 };
-  firebase.initializeApp(firebaseConfig);
-
-  var database = firebase.database();
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 $("#add-train").on("click", function (event) {
     event.preventDefault();
 
-    //user input info
+    //user input
     var traName = $("#train-name").val().trim();
     var traDes = $("#destination").val().trim();
     var traTime = $("#time").val().trim();

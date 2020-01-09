@@ -1,7 +1,8 @@
 div.jumbotron{
-    background-color:blue;
-    color:wheat;
-/* opacity:0.9; */
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images/fl-train.png);
+    background-size: cover;
+    color: white;
+/* opacity:0.6; */
 }
 
 h1,h3,h4,h6{
@@ -18,8 +19,8 @@ h4{
     padding:15px 0;
     color:white;
 }
-.card-heading{
-    background-color:rgb(205, 63, 181);
+.card-header{
+    background-color:rgb(233, 136, 25);
     color:black;
 }
 tr th,td{

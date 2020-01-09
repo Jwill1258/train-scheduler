@@ -14,7 +14,7 @@ var firebaseConfig = {
 $("#add-train").on("click", function (event) {
     event.preventDefault();
 
-    //user input info
+    //user input
     var traName = $("#train-name").val().trim();
     var traDes = $("#destination").val().trim();
     var traTime = $("#time").val().trim();

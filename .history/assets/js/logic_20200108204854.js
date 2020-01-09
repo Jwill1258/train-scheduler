@@ -1,3 +1,4 @@
+// Your web app's Firebase configuration
 var firebaseConfig = {
   apiKey: "AIzaSyCa_Z7VAuTjtfBPRWwWlbFPz9L7oV3rwx4",
   authDomain: "train-7df11.firebaseapp.com",
@@ -7,14 +8,13 @@ var firebaseConfig = {
   messagingSenderId: "276358036361",
   appId: "1:276358036361:web:c0c8f4fb410b08daf83f58"
 };
-  firebase.initializeApp(firebaseConfig);
-
-  var database = firebase.database();
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 $("#add-train").on("click", function (event) {
     event.preventDefault();
 
-    //user input info
+    //user input
     var traName = $("#train-name").val().trim();
     var traDes = $("#destination").val().trim();
     var traTime = $("#time").val().trim();
